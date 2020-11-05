@@ -4,11 +4,13 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class PlayerController : MonoBehaviour
-{
+{   /*
     [SerializeField]
     private Tilemap ground;
     private Movement controls;
     // Start is called before the first frame update
+
+    
     private void Awake()
     {
         controls = new Movement();
@@ -36,4 +38,6 @@ public class PlayerController : MonoBehaviour
         if (!ground.HasTile(gridPos)) return false;
         return true;
     }
+    */
+    
 }
