@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Movement.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Tracker.cs" />
      <Compile Include="Assets\Scripts\gridnav.cs" />
      <Compile Include="Assets\Scripts\tile.cs" />
     <Reference Include="UnityEngine">
