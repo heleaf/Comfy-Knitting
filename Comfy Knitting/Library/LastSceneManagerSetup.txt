@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/level selector.unity
+=======
+- path: Assets/Scenes/Tilemap.unity
+>>>>>>> 1b10748bff02cccd2e05a6a3a8b9e641cc4bbd1a
   isLoaded: 1
   isActive: 1
   isSubScene: 0
