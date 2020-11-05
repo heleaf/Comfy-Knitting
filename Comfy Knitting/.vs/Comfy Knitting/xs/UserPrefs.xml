@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{B86EE8CB-74E9-F875-BF51-C7497C0DF779}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/sceneTransition.cs">
+    <Files>
+      <File FileName="Assets/Scripts/sceneTransition.cs" Line="16" Column="6" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Comfy Knitting" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="sceneTransition.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6d31cb8e-4d56-447f-aea8-4f6243160096" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
