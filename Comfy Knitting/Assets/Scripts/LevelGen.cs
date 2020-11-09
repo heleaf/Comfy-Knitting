@@ -40,8 +40,8 @@ public class LevelGen : MonoBehaviour
     void cameraSetup(){
       mainCam.enabled = true;
       mainCam.orthographic = true;
-      mainCam.orthographicSize = map.width/2.0f+0.5f;
-      mainCam.transform.position = new Vector3(map.width/2.0f, map.height/2.0f-.5f, -10);
+      mainCam.orthographicSize = map.width/2.0f;
+      mainCam.transform.position = new Vector3(map.width/2.0f-0.5f, map.height/2.0f-.5f, -10);
       letterText = textObject.GetComponent<TextMeshProUGUI>();
     }
 
@@ -52,7 +52,7 @@ public class LevelGen : MonoBehaviour
         keyActions(currentPassword[lettersLeft]);
       }
       else{
-        if(tilesLeft>=1){
+        if(tilesLeft>0){
           colorMappings[tilesLeft].gameobject.GetComponent<SpriteRenderer>().color = colorMappings[tilesLeft].color;
           tilesLeft--;
           currentPassword = colorMappings[tilesLeft].password;
@@ -61,6 +61,8 @@ public class LevelGen : MonoBehaviour
           player.transform.position = colorMappings[tilesLeft].pos;
         }
         else{
+          colorMappings[tilesLeft].gameobject.GetComponent<SpriteRenderer>().color = colorMappings[tilesLeft].color;
+          Destroy(player);
           letterText.text = "You did it!";
         }
       }
