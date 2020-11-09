@@ -5,6 +5,6 @@ public class ColorToPrefab
 {
     public Vector2 pos;
     public Color color;
-    public GameObject prefab;
+    public GameObject gameobject;
     public string[] password;
 }
