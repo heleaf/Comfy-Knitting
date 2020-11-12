@@ -8,7 +8,7 @@ public class LevelGen : MonoBehaviour
   public Camera mainCam; //Main camera
   public GameObject textObject;
 
-  private TextMeshProUGUI letterText;
+  public TextMeshProUGUI letterText;
   public Texture2D map; //The image material for the level
   private ColorToPrefab[] colorMappings; //Tile data array
 
@@ -26,7 +26,8 @@ public class LevelGen : MonoBehaviour
     void Start()
     {
       cameraSetup(); //Sets camera dimensions according to map dimensions
-      GenerateLevel();  //Generates array of tile information and instantiates tiles
+        Debug.Log("Camera setup");
+      GenerateLevel(); //Generates array of tile information and instantiates tiles
 
 
       //Initializes player state
@@ -40,9 +41,10 @@ public class LevelGen : MonoBehaviour
     void cameraSetup(){
       mainCam.enabled = true;
       mainCam.orthographic = true;
-      mainCam.orthographicSize = map.width/2.0f;
+      mainCam.orthographicSize = (map.width/2.0f)*1.5f;
       mainCam.transform.position = new Vector3(map.width/2.0f-0.5f, map.height/2.0f-.5f, -10);
       letterText = textObject.GetComponent<TextMeshProUGUI>();
+      letterText.transform.position = new Vector3(map.width/2.0f, map.height*0.7f);
     }
 
     //Called every frame
@@ -96,11 +98,17 @@ public class LevelGen : MonoBehaviour
 
     //Generates tile data array and fills initial data.
     void GenerateTile(int x, int y){
-      Color pixelColor = map.GetPixel(x, y);
+        Debug.Log("unity pls");
+        Debug.Log(map.GetPixel(x, y)); //
+        Color pixelColor = map.GetPixel(x, y);
+        Debug.Log("Help");
 
-      if (pixelColor.a == 0) return; //ignores transparent pixel
+      if (pixelColor.a == 0) { 
+         Debug.Log("??????");
+      }
+        // return; //ignores transparent pixel
 
-      ColorToPrefab colorMapping = new ColorToPrefab();
+        ColorToPrefab colorMapping = new ColorToPrefab();
       colorMappings[x+y*map.width] = colorMapping;
       colorMapping.password = CreateRandomString(passwordLength);
       colorMapping.pos = new Vector2(x, y);

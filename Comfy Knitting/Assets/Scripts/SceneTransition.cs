@@ -16,6 +16,11 @@ public class SceneTransition : MonoBehaviour
         SceneManager.LoadScene("level selector");
         Debug.Log("loaded level selec");
     }
+
+    public void goToGame()
+    {
+        SceneManager.LoadScene("Tilemap");
+    }
     
 }
 

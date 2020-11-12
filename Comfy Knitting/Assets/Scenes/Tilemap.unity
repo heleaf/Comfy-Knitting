@@ -152,7 +152,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCam: {fileID: 1251158709}
   textObject: {fileID: 273726673}
-  map: {fileID: 2800000, guid: 8c26ed6785ccad045a143d88e23bfa0a, type: 3}
+  letterText: {fileID: 0}
+  map: {fileID: 2800000, guid: c4445a656a07c1b42b251483ba943a28, type: 3}
   prefab: {fileID: 162591943665434762, guid: 057217364a8b75143a801e0c4b31b45e, type: 3}
   playerprefab: {fileID: 3536471687640687348, guid: cccdea8ac222f864a9e5f39be2554109,
     type: 3}
@@ -227,7 +228,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Letter
+  m_text: hi
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

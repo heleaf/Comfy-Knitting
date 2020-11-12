@@ -202,7 +202,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 32094830}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1301879261}
+        m_MethodName: goToGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &32094830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,6 +346,7 @@ GameObject:
   - component: {fileID: 45659947}
   - component: {fileID: 45659946}
   - component: {fileID: 45659945}
+  - component: {fileID: 45659948}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -424,6 +436,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45659943}
   m_CullTransparentMesh: 0
+--- !u!114 &45659948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45659943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e3e33fc4f4294999ac530fb4e9a458c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &55351492
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,7 +792,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 360180262}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1444786687}
+        m_MethodName: goToGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &360180262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1217,6 +1252,7 @@ GameObject:
   - component: {fileID: 1301879260}
   - component: {fileID: 1301879259}
   - component: {fileID: 1301879258}
+  - component: {fileID: 1301879261}
   m_Layer: 5
   m_Name: Panel (1)
   m_TagString: Untagged
@@ -1306,6 +1342,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1301879256}
   m_CullTransparentMesh: 0
+--- !u!114 &1301879261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301879256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e3e33fc4f4294999ac530fb4e9a458c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1305538506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1434,6 +1482,7 @@ GameObject:
   - component: {fileID: 1444786686}
   - component: {fileID: 1444786685}
   - component: {fileID: 1444786684}
+  - component: {fileID: 1444786687}
   m_Layer: 5
   m_Name: Panel (2)
   m_TagString: Untagged
@@ -1523,6 +1572,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444786682}
   m_CullTransparentMesh: 0
+--- !u!114 &1444786687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444786682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e3e33fc4f4294999ac530fb4e9a458c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1659953248
 GameObject:
   m_ObjectHideFlags: 0
@@ -1757,7 +1818,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2022040724}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 45659948}
+        m_MethodName: goToGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &2022040724
 MonoBehaviour:
   m_ObjectHideFlags: 0
