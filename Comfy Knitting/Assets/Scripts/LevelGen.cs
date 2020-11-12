@@ -7,8 +7,8 @@ public class LevelGen : MonoBehaviour
 {
   public Camera mainCam; //Main camera
   public GameObject textObject;
-
   public TextMeshProUGUI letterText;
+  
   public Texture2D map; //The image material for the level
   private ColorToPrefab[] colorMappings; //Tile data array
 
@@ -122,7 +122,7 @@ public class LevelGen : MonoBehaviour
     private string[] CreateRandomString(int stringLength) {
         int _stringLength = stringLength - 1;
         string[] randomString = new string[stringLength];
-        string[] characters = new string[] {"a", "s", "d", "q", "w", "e"};
+        string[] characters = new string[] {"a", "s", "d", "w"};
         for (int i = 0; i <= _stringLength; i++) {
             randomString[i] = (characters[Random.Range(0, characters.Length)]);
         }
