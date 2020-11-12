@@ -57,6 +57,7 @@ public class LevelGen : MonoBehaviour
     {
       if (lettersLeft>=0){
         keyActions(currentPassword[lettersLeft]);
+        nLT();
       }
       else{
         if(tilesLeft>0){
@@ -89,8 +90,8 @@ public class LevelGen : MonoBehaviour
     }
     string joinStrings(string[] k, int length){
       string result = "";
-      for(int i = 0; i<length; i++){
-        result += k[i];
+      for(int i = length-1; i>=0; i--){
+        result += " " + k[i];
       }
       return result;
     }

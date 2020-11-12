@@ -157,7 +157,7 @@ MonoBehaviour:
   prefab: {fileID: 162591943665434762, guid: 057217364a8b75143a801e0c4b31b45e, type: 3}
   playerprefab: {fileID: 3536471687640687348, guid: cccdea8ac222f864a9e5f39be2554109,
     type: 3}
-  passwordLength: 1
+  passwordLength: 4
 --- !u!4 &73426164
 Transform:
   m_ObjectHideFlags: 0
