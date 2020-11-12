@@ -7,8 +7,11 @@ public class LevelGen : MonoBehaviour
 {
   public Camera mainCam; //Main camera
   public GameObject textObject;
-  public TextMeshProUGUI letterText;
-  
+  private TextMeshProUGUI letterText;
+
+  public GameObject nextTextObject;
+  private TextMeshProUGUI nextLetterText;
+
   public Texture2D map; //The image material for the level
   private ColorToPrefab[] colorMappings; //Tile data array
 
@@ -35,6 +38,8 @@ public class LevelGen : MonoBehaviour
       currentPassword = colorMappings[tilesLeft].password;
       lettersLeft = passwordLength-1;
       letterText.text = currentPassword[lettersLeft];
+      nLT();
+      
     }
 
     //Sets camera dimensions according to map dimensions. Subject to change.
@@ -44,7 +49,7 @@ public class LevelGen : MonoBehaviour
       mainCam.orthographicSize = (map.width/2.0f)*1.5f;
       mainCam.transform.position = new Vector3(map.width/2.0f-0.5f, map.height/2.0f-.5f, -10);
       letterText = textObject.GetComponent<TextMeshProUGUI>();
-      letterText.transform.position = new Vector3(map.width/2.0f, map.height*0.7f);
+      nextLetterText = nextTextObject.GetComponent<TextMeshProUGUI>();
     }
 
     //Called every frame
@@ -60,6 +65,7 @@ public class LevelGen : MonoBehaviour
           currentPassword = colorMappings[tilesLeft].password;
           lettersLeft = passwordLength-1;
           letterText.text = currentPassword[lettersLeft];
+          nLT();
           player.transform.position = colorMappings[tilesLeft].pos;
         }
         else{
@@ -68,6 +74,25 @@ public class LevelGen : MonoBehaviour
           letterText.text = "You did it!";
         }
       }
+    }
+
+    void nLT (){
+      if(lettersLeft>0){
+        nextLetterText.text = joinStrings(currentPassword, lettersLeft);
+      }
+      else if (tilesLeft>0){
+        nextLetterText.text = joinStrings(colorMappings[tilesLeft-1].password, passwordLength);
+      }
+      else{
+        nextLetterText.text = "";
+      }
+    }
+    string joinStrings(string[] k, int length){
+      string result = "";
+      for(int i = 0; i<length; i++){
+        result += k[i];
+      }
+      return result;
     }
 
     //Uses player input to progress passwords.
