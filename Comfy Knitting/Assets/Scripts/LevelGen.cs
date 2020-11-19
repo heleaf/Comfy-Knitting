@@ -12,7 +12,7 @@ public class LevelGen : MonoBehaviour
   public GameObject nextTextObject;
   private TextMeshProUGUI nextLetterText;
 
-  public Texture2D map; //The image material for the level
+  private Texture2D map; //The image material for the level
   private ColorToPrefab[] colorMappings; //Tile data array
 
   public GameObject prefab; //Prefab for tile generation
@@ -28,17 +28,18 @@ public class LevelGen : MonoBehaviour
     //Called at start
     void Start()
     {
+      map = GameObject.FindGameObjectWithTag("DataTransfer").GetComponent<SetMap>().currentMap;
       cameraSetup(); //Sets camera dimensions according to map dimensions
         Debug.Log("Camera setup");
       GenerateLevel(); //Generates array of tile information and instantiates tiles
-      nextLetterText.text = GeneratePasswordString();
+      //nextLetterText.text = GeneratePasswordString();
 
       //Initializes player state
       tilesLeft = colorMappings.Length-1;
       currentPassword = colorMappings[tilesLeft].password;
       lettersLeft = passwordLength-1;
       letterText.text = currentPassword[lettersLeft];
-      //nLT();
+      nLT();
       
     }
 
@@ -47,17 +48,17 @@ public class LevelGen : MonoBehaviour
       mainCam.enabled = true;
       mainCam.orthographic = true;
       mainCam.orthographicSize = (map.width/2.0f)*1.5f;
-      mainCam.transform.position = new Vector3(map.width/2.0f-0.5f, map.height/2.0f-.5f, -10);
+      mainCam.transform.position = new Vector3(map.width -.5f , map.height/2.0f-.5f, -10);
       letterText = textObject.GetComponent<TextMeshProUGUI>();
       nextLetterText = nextTextObject.GetComponent<TextMeshProUGUI>();
     }
 
     //Called every frame
-    void Update()
+    void LateUpdate()
     {
       if (lettersLeft>=0){
         keyActions(currentPassword[lettersLeft]);
-        //nLT();
+        nLT();
       }
       else{
         if(tilesLeft>0){
@@ -66,7 +67,7 @@ public class LevelGen : MonoBehaviour
           currentPassword = colorMappings[tilesLeft].password;
           lettersLeft = passwordLength-1;
           letterText.text = currentPassword[lettersLeft];
-          //nLT();
+          nLT();
           player.transform.position = colorMappings[tilesLeft].pos;
         }
         else{
@@ -77,27 +78,27 @@ public class LevelGen : MonoBehaviour
       }
     }
 
-    string GeneratePasswordString(){
+    /*string GeneratePasswordString(){
       string acc = "";
       for (int i = 0; i<map.width*map.height; i++){
         acc = joinStrings(colorMappings[i].password, passwordLength) + acc;
       }
       return acc;
-    }
+    }*/
 
     //Discrete implementation of displaying upcoming letters
 
-    /*void nLT (){
+    void nLT (){
       if(lettersLeft>0){
         nextLetterText.text = joinStrings(currentPassword, lettersLeft);
       }
-      else if (tilesLeft>0){
+      /*else if (tilesLeft>0){
         nextLetterText.text = joinStrings(colorMappings[tilesLeft-1].password, passwordLength);
-      }
+      }*/
       else{
         nextLetterText.text = "";
       }
-    }*/
+    }
     string joinStrings(string[] k, int length){
       string result = "";
       for(int i = length-1; i>=0; i--){

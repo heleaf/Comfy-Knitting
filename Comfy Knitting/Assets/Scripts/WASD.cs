@@ -17,11 +17,17 @@ public class WASD : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown("w")){
-          if (string.Equals("w", letterText.text)) WKey.GetComponent<Image>().color = newBlue;
-          else WKey.GetComponent<Image>().color = newRed;
+          if (string.Equals("w", letterText.text)){
+            WKey.GetComponent<Image>().color = newBlue;
+          }
+          else{ 
+            WKey.GetComponent<Image>().color = newRed;
+          }
         }
-        if(Input.GetKeyUp("w")) WKey.GetComponent<Image>().color = Color.white;
-
+        if(Input.GetKeyUp("w")){
+          WKey.GetComponent<Image>().color = Color.white;
+        }
+        
 
         if(Input.GetKeyDown("a")){
           if (string.Equals("a", letterText.text)) AKey.GetComponent<Image>().color = newBlue;
@@ -29,11 +35,15 @@ public class WASD : MonoBehaviour
         }
         if(Input.GetKeyUp("a")) AKey.GetComponent<Image>().color = Color.white;
 
+
+
         if(Input.GetKeyDown("s")){
           if (string.Equals("s", letterText.text)) SKey.GetComponent<Image>().color = newBlue;
           else SKey.GetComponent<Image>().color = newRed;
         }
         if(Input.GetKeyUp("s")) SKey.GetComponent<Image>().color = Color.white;
+
+
 
         if(Input.GetKeyDown("d")){
           if (string.Equals("d", letterText.text)) DKey.GetComponent<Image>().color = newBlue;
