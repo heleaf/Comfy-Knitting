@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ColorToPrefab.cs" />
+     <Compile Include="Assets\Scripts\DisplayScore.cs" />
      <Compile Include="Assets\Scripts\Escape.cs" />
      <Compile Include="Assets\Scripts\LevelGen.cs" />
      <Compile Include="Assets\Scripts\SceneTransition.cs" />
