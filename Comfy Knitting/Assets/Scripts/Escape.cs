@@ -39,10 +39,12 @@ public class Escape : MonoBehaviour
 
     public void toHome(){
       SceneManager.LoadScene("title page");
+      Destroy(GameObject.FindGameObjectWithTag("DataTransfer"));
     }
 
     public void toSelect(){
       SceneManager.LoadScene("level selector");
+      Destroy(GameObject.FindGameObjectWithTag("DataTransfer"));
     }
 
     public void Continue(){

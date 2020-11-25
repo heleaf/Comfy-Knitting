@@ -29,6 +29,8 @@ public class LevelGen : MonoBehaviour
     void Start()
     {
       map = GameObject.FindGameObjectWithTag("DataTransfer").GetComponent<SetMap>().currentMap;
+
+
       cameraSetup(); //Sets camera dimensions according to map dimensions
         Debug.Log("Camera setup");
       GenerateLevel(); //Generates array of tile information and instantiates tiles
@@ -47,8 +49,8 @@ public class LevelGen : MonoBehaviour
     void cameraSetup(){
       mainCam.enabled = true;
       mainCam.orthographic = true;
-      mainCam.orthographicSize = (map.width/2.0f)*1.5f;
-      mainCam.transform.position = new Vector3(map.width -.5f , map.height/2.0f-.5f, -10);
+      mainCam.orthographicSize = map.width/1.2f;
+      mainCam.transform.position = new Vector3(map.width, map.width/4.0f, -10);
       letterText = textObject.GetComponent<TextMeshProUGUI>();
       nextLetterText = nextTextObject.GetComponent<TextMeshProUGUI>();
     }
@@ -73,7 +75,7 @@ public class LevelGen : MonoBehaviour
         else{
           colorMappings[tilesLeft].gameobject.GetComponent<SpriteRenderer>().color = colorMappings[tilesLeft].color;
           Destroy(player);
-          letterText.text = "You did it!";
+          letterText.text = "Finish";
         }
       }
     }
