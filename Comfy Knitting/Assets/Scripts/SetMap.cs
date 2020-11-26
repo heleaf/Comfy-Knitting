@@ -7,6 +7,7 @@ public class SetMap : MonoBehaviour
     public Texture2D[] maps;
 
     public int currentIndex;
+
     public Texture2D currentMap;
     
     // Start is called before the first frame update

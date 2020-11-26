@@ -16,8 +16,10 @@ public class Timer : MonoBehaviour
 
     private TextMeshProUGUI timerText;
 
-    void Start(){
+    private SetMap smap;
 
+    void Start(){
+      smap = GameObject.FindGameObjectWithTag("DataTransfer").GetComponent<SetMap>();
 
       timerText = gameObject.GetComponent<TextMeshProUGUI>();
       timerText.text = "00:00";
@@ -39,7 +41,13 @@ public class Timer : MonoBehaviour
           float minutes = timeElapsed / 60;
           timerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
           
-          if(endText.text == "Finish") started = 2;
+          if(endText.text == "!"){
+            endText.text = ">";
+            started = 2;
+            if(PlayerPrefs.GetFloat("Highscore" + smap.currentIndex, 6000.0f) > timeElapsed){
+              PlayerPrefs.SetFloat("Highscore" + smap.currentIndex, timeElapsed);
+            }
+          }
         }
     }
 }

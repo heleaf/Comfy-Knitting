@@ -15,11 +15,20 @@ public class SceneTransition : MonoBehaviour
     {
         SceneManager.LoadScene("level selector");
         Debug.Log("loaded level selec");
+        Destroy(GameObject.FindGameObjectWithTag("DataTransfer"));
     }
 
     public void goToGame()
     {
-        SceneManager.LoadScene("Tilemap");
+        SceneManager.LoadScene("Game");
+    }
+
+    public void goToSettings(){
+      SceneManager.LoadScene("Settings");
+    }
+
+    public void exit(){
+      Application.Quit();
     }
     
 }

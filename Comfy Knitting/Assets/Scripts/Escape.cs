@@ -20,11 +20,13 @@ public class Escape : MonoBehaviour
         if(Input.GetKeyDown("escape")){
           if(!isPaused){
             pausemenu.SetActive(true);
+            Cursor.visible = true;
             isPaused = true;
           }
           else{
             pausemenu.SetActive(false);
             isPaused = false;
+            Cursor.visible = false;
           }
         }
     }
@@ -35,11 +37,6 @@ public class Escape : MonoBehaviour
     public void Retry(){
       Scene scene = SceneManager.GetActiveScene(); 
       SceneManager.LoadScene(scene.name);
-    }
-
-    public void toHome(){
-      SceneManager.LoadScene("title page");
-      Destroy(GameObject.FindGameObjectWithTag("DataTransfer"));
     }
 
     public void toSelect(){

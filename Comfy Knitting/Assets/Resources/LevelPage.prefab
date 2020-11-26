@@ -292,6 +292,7 @@ GameObject:
   - component: {fileID: 1243684125632570016}
   - component: {fileID: 1243684123975434185}
   - component: {fileID: 1243684123975434186}
+  - component: {fileID: 5822447605418397829}
   m_Layer: 5
   m_Name: LevelPanel1
   m_TagString: Untagged
@@ -362,6 +363,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5822447605418397829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243684123975434188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af6c754dc7571342b8a625b1bd7206a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeObject: {fileID: 1243684124951542595}
+  index: 0
 --- !u!1 &1243684123985393329
 GameObject:
   m_ObjectHideFlags: 0
@@ -1349,6 +1364,7 @@ GameObject:
   - component: {fileID: 1243684125598549203}
   - component: {fileID: 1243684125027802438}
   - component: {fileID: 1243684125027802439}
+  - component: {fileID: 1650315332631545774}
   m_Layer: 5
   m_Name: LevelPanel3
   m_TagString: Untagged
@@ -1419,6 +1435,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1650315332631545774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243684125027802457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af6c754dc7571342b8a625b1bd7206a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeObject: {fileID: 1243684125112497852}
+  index: 0
 --- !u!1 &1243684125029450588
 GameObject:
   m_ObjectHideFlags: 0
@@ -2206,6 +2236,7 @@ GameObject:
   - component: {fileID: 1243684124588172321}
   - component: {fileID: 1243684125612355312}
   - component: {fileID: 1243684125612355313}
+  - component: {fileID: 8928412391443612748}
   m_Layer: 5
   m_Name: LevelPanel2
   m_TagString: Untagged
@@ -2276,6 +2307,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8928412391443612748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243684125612355315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3af6c754dc7571342b8a625b1bd7206a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeObject: {fileID: 1243684125029450588}
+  index: 0
 --- !u!1 &1243684125632733526
 GameObject:
   m_ObjectHideFlags: 0

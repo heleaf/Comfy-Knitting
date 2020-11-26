@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/level selector.unity
     guid: de16098d0272f4dbb8dccb27de9cb850
   - enabled: 1
-    path: Assets/Scenes/Tilemap.unity
+    path: Assets/Scenes/Game.unity
     guid: 7309f1ebd2d2d724eb294bbe9bd9d6b4
+  - enabled: 1
+    path: Assets/Scenes/Settings.unity
+    guid: 0d29790fb22c64f45af93c2661df29da
   m_configObjects: {}

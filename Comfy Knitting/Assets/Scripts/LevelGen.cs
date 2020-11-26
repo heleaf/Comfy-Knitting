@@ -7,6 +7,10 @@ public class LevelGen : MonoBehaviour
 {
   //private float fullwidth = 100;
   //private float scale;
+  public GameObject levelObject;
+  private TextMeshProUGUI levelText;
+
+
 
   public Camera mainCam; //Main camera
   private Texture2D map; //The image material for the level
@@ -25,6 +29,9 @@ public class LevelGen : MonoBehaviour
       cameraSetup(); //Sets camera dimensions according to map dimensions
 
       GenerateLevel(); //Generates array of tile information and instantiates tiles
+
+      levelText = levelObject.GetComponent<TextMeshProUGUI>();
+      levelText.text = "Level " + (GameObject.FindGameObjectWithTag("DataTransfer").GetComponent<SetMap>().currentIndex + 1);
     }
 
     //Sets camera dimensions according to map dimensions. Subject to change.

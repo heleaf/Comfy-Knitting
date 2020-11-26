@@ -23,6 +23,9 @@ public class NextLevel : MonoBehaviour
     public GameObject writeObject;
     private TextMeshProUGUI writeText;
 
+    public GameObject hsObject;
+    private TextMeshProUGUI hsText;
+
     void Start(){
       endScreen.SetActive(false);
 
@@ -34,18 +37,29 @@ public class NextLevel : MonoBehaviour
       text = textObject.GetComponent<TextMeshProUGUI>();
       readText = readObject.GetComponent<TextMeshProUGUI>();
       writeText = writeObject.GetComponent<TextMeshProUGUI>();
+      hsText = hsObject.GetComponent<TextMeshProUGUI>();
     }
 
     void Update(){
-      if(text.text == "!" && !active){
-        endScreen.SetActive(true);
-        writeText.text = readText.text;
+      if(text.text == ">" && !active){
         active = true;
+
+        endScreen.SetActive(true);
         pauseMenu.SetActive(false);
         Cursor.visible = true;
-      }
 
+        writeText.text = readText.text;
+        hsText.text = "High score: " + convertTime(PlayerPrefs.GetFloat("Highscore" + smap.currentIndex, 0));
+      }
     }
+
+    string convertTime(float x){
+      float seconds = x % 60;
+      float minutes = x / 60;
+      return minutes.ToString("00") + ":" + seconds.ToString("00");
+    }
+
+
     public void toNext(){
       smap.currentIndex += 1;
       smap.getMap(smap.currentIndex);

@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\ColorToPrefab.cs" />
+     <Compile Include="Assets\Scripts\DisplayData.cs" />
      <Compile Include="Assets\Scripts\Escape.cs" />
      <Compile Include="Assets\Scripts\KnittingGIF.cs" />
      <Compile Include="Assets\Scripts\LevelGen.cs" />
@@ -45,8 +46,8 @@
      <Compile Include="Assets\Scripts\PlayerControls.cs" />
      <Compile Include="Assets\Scripts\SceneTransition.cs" />
      <Compile Include="Assets\Scripts\SetMap.cs" />
+     <Compile Include="Assets\Scripts\Settings.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
-     <Compile Include="Assets\Scripts\UIButtons.cs" />
      <Compile Include="Assets\Scripts\WASD.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
