@@ -37,8 +37,8 @@ public class Timer : MonoBehaviour
         }
         else if(started==1){
           timeElapsed += Time.deltaTime;
-          float seconds = timeElapsed % 60;
-          float minutes = timeElapsed / 60;
+          int seconds = (int)(timeElapsed % 60);
+          int minutes = (int)(timeElapsed / 60);
           timerText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
           
           if(endText.text == "!"){

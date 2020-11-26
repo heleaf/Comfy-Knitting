@@ -22,8 +22,8 @@ public class DisplayData : MonoBehaviour
         return "N/A";
       }
       else{
-        float seconds = x % 60;
-        float minutes = x / 60;
+        int seconds = (int)(x % 60);
+        int minutes = (int)(x / 60);
         return minutes.ToString("00") + ":" + seconds.ToString("00");
       }
     }

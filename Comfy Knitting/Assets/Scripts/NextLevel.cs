@@ -54,8 +54,8 @@ public class NextLevel : MonoBehaviour
     }
 
     string convertTime(float x){
-      float seconds = x % 60;
-      float minutes = x / 60;
+      int seconds = (int)(x % 60);
+      int minutes = (int)(x / 60);
       return minutes.ToString("00") + ":" + seconds.ToString("00");
     }
 
