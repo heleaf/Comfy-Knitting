@@ -154,7 +154,7 @@ MonoBehaviour:
   mainCam: {fileID: 1251158709}
   colorMappings: []
   prefab: {fileID: 162591943665434762, guid: 057217364a8b75143a801e0c4b31b45e, type: 3}
-  passwordLength: 1
+  passwordLength: 2
 --- !u!224 &73426165
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1170,7 +1170,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6c484e13e60ec234d801cd310894836d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.85
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2334,6 +2334,7 @@ GameObject:
   - component: {fileID: 1636095533}
   - component: {fileID: 1636095532}
   - component: {fileID: 1636095537}
+  - component: {fileID: 1636095535}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2415,7 +2416,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 1251158709}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -2426,6 +2427,35 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1636095535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636095530}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: acd20d85c1dc79d43a52ed4e6c0f629e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1636095537
 CanvasRenderer:
   m_ObjectHideFlags: 0

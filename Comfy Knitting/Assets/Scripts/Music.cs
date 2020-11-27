@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Music : MonoBehaviour
 {
+    public float musicVolume;
+
+    private float musicDefault = 0.18f;
+
+    public float keyVolume;
+
+    public float keyDefault = 0.7f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +22,9 @@ public class Music : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void setMusicVol(){
+
     }
 }

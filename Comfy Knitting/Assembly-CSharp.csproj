@@ -47,6 +47,7 @@
      <Compile Include="Assets\Scripts\PanelMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerControls.cs" />
      <Compile Include="Assets\Scripts\Pulse.cs" />
+     <Compile Include="Assets\Scripts\ResolutionL.cs" />
      <Compile Include="Assets\Scripts\SceneTransition.cs" />
      <Compile Include="Assets\Scripts\SetMap.cs" />
      <Compile Include="Assets\Scripts\Settings.cs" />
