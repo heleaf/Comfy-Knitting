@@ -18,10 +18,10 @@ public class ResolutionL : MonoBehaviour
       Debug.Log(w);
       Debug.Log(h);
       if((float)w/(float)h < ratio){
-        scalar = (float)w/1150;
+            scalar = (float)h / 647;
       }
       else{
-        scalar = (float)h/647;
+            scalar = (float)w / 1150;
       }
 
       gameObject.transform.localScale = new Vector3(scalar, scalar, 1);
