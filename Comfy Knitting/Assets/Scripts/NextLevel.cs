@@ -26,6 +26,12 @@ public class NextLevel : MonoBehaviour
     public GameObject hsObject;
     private TextMeshProUGUI hsText;
 
+    public Image star1;
+    public Image star2;
+    public Image star3;
+
+    public Sprite starFilled;
+
     void Start(){
       endScreen.SetActive(false);
 
@@ -45,11 +51,22 @@ public class NextLevel : MonoBehaviour
         active = true;
 
         endScreen.SetActive(true);
+
+        float time = PlayerPrefs.GetFloat("Highscore" + smap.currentIndex, 6000);
+        int tiles = smap.currentMap.width * smap.currentMap.height * smap.passwordLengths[smap.currentIndex];
+        float bronze = tiles;
+        float silver = tiles*.7f;
+        float gold = tiles*.45f;
+        if(time<bronze) star1.sprite = starFilled;
+        if(time<silver) star2.sprite = starFilled;
+        if(time<gold) star3.sprite = starFilled;
+
+
         pauseMenu.SetActive(false);
         Cursor.visible = true;
 
         writeText.text = readText.text;
-        hsText.text = "High score: " + convertTime(PlayerPrefs.GetFloat("Highscore" + smap.currentIndex, 0));
+        hsText.text = "High score: " + convertTime(time);
       }
     }
 

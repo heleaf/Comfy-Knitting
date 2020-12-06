@@ -6,6 +6,8 @@ public class SetMap : MonoBehaviour
 {
     public Texture2D[] maps;
 
+    public int[] passwordLengths;
+
     public int currentIndex;
 
     public Texture2D currentMap;
@@ -19,6 +21,7 @@ public class SetMap : MonoBehaviour
     public void getMap(int index){
       currentIndex = index;
       currentMap = maps[index];
+      PlayerPrefs.SetInt("PasswordLength", passwordLengths[index]);
     }
     
 }

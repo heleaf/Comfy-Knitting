@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    public GameObject Music;
     private int pageIndex;
 
     private Image canvasImage;
@@ -27,9 +26,6 @@ public class LevelManager : MonoBehaviour
       leftButton.SetActive(false);
       rightButton.SetActive(true);
 
-      GameObject[] temp = GameObject.FindGameObjectsWithTag("Music");
-      Debug.Log(temp.Length);
-      if(temp.Length>1) Destroy(Music);
     }
 
     void setInactiveOnStart(){

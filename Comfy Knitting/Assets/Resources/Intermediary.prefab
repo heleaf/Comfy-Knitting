@@ -51,7 +51,8 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 9e54a144061748847811e3ea1a4971b5, type: 3}
   - {fileID: 2800000, guid: c4445a656a07c1b42b251483ba943a28, type: 3}
   - {fileID: 2800000, guid: 8c26ed6785ccad045a143d88e23bfa0a, type: 3}
-  - {fileID: 2800000, guid: 8c26ed6785ccad045a143d88e23bfa0a, type: 3}
+  passwordLengths: 020000000400000001000000020000000300000004000000
+  currentIndex: 0
   currentMap: {fileID: 2800000, guid: c4445a656a07c1b42b251483ba943a28, type: 3}
 --- !u!114 &4881547831660275458
 MonoBehaviour:

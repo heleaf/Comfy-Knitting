@@ -23,6 +23,7 @@ public class LevelGen : MonoBehaviour
     {
       Cursor.visible = false;
       map = GameObject.FindGameObjectWithTag("DataTransfer").GetComponent<SetMap>().currentMap;
+      passwordLength = PlayerPrefs.GetInt("PasswordLength");
       //scale = fullwidth/map.width;
       //prefab.transform.localScale = new Vector3(scale, scale, 1);
 
@@ -54,16 +55,8 @@ public class LevelGen : MonoBehaviour
 
     //Generates tile data array and fills initial data.
     void GenerateTile(int x, int y){
-        Debug.Log("unity pls");
-        Debug.Log(map.GetPixel(x, y)); //
-        Color pixelColor = map.GetPixel(x, y);
-        Debug.Log("Help");
 
-      if (pixelColor.a == 0) { 
-         Debug.Log("??????");
-      }
-        // return; //ignores transparent pixel
-
+      Color pixelColor = map.GetPixel(x, y);
       ColorToPrefab colorMapping = new ColorToPrefab();
       colorMappings[x+y*map.width] = colorMapping;
       colorMapping.password = CreateRandomString(passwordLength);

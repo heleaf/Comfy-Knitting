@@ -20,10 +20,12 @@ public class Escape : MonoBehaviour
         if(Input.GetKeyDown("escape")){
           if(!isPaused){
             pausemenu.SetActive(true);
+            Time.timeScale = 0;
             Cursor.visible = true;
             isPaused = true;
           }
           else{
+            Time.timeScale = 1;
             pausemenu.SetActive(false);
             isPaused = false;
             Cursor.visible = false;
@@ -32,19 +34,23 @@ public class Escape : MonoBehaviour
     }
 
     public void ExitButton(){
+      Time.timeScale = 1;
       Application.Quit();
     }
     public void Retry(){
+      Time.timeScale = 1;
       Scene scene = SceneManager.GetActiveScene(); 
       SceneManager.LoadScene(scene.name);
     }
 
     public void toSelect(){
+      Time.timeScale = 1;
       SceneManager.LoadScene("level selector");
       Destroy(GameObject.FindGameObjectWithTag("DataTransfer"));
     }
 
     public void Continue(){
+      Time.timeScale = 1;
       pausemenu.SetActive(false);
       isPaused = false;
     }
