@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Settings : MonoBehaviour
 {
@@ -53,4 +54,10 @@ public class Settings : MonoBehaviour
     cancelButton.SetActive(false);
   }
 
+  void Update(){
+    if(Input.GetKeyDown("escape")){
+      SceneManager.LoadScene("level selector");
+      Destroy(GameObject.FindGameObjectWithTag("DataTransfer"));
+    }
+  }
 }

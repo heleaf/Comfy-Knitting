@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class LevelManager : MonoBehaviour
     public GameObject leftButton;
 
     public GameObject rightButton;
+
+    public GameObject rules;
     
     // Start is called before the first frame update
     void Start()
@@ -58,9 +61,15 @@ public class LevelManager : MonoBehaviour
       rightButton.SetActive(true);
     }
 
+    public void openRules(){
+      rules.SetActive(true);
+    }
+    public void closeRules(){
+      rules.SetActive(false);
+    }
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown("escape")) SceneManager.LoadScene("title page");
     }
 }

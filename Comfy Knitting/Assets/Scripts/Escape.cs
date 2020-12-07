@@ -25,10 +25,7 @@ public class Escape : MonoBehaviour
             isPaused = true;
           }
           else{
-            Time.timeScale = 1;
-            pausemenu.SetActive(false);
-            isPaused = false;
-            Cursor.visible = false;
+            Continue();
           }
         }
     }
@@ -53,5 +50,13 @@ public class Escape : MonoBehaviour
       Time.timeScale = 1;
       pausemenu.SetActive(false);
       isPaused = false;
+      Cursor.visible = false;
     }
+
+    public void ContinueWithCursor(){
+      Time.timeScale = 1;
+      pausemenu.SetActive(false);
+      isPaused = false;
+    }
+    
 }

@@ -8,13 +8,11 @@ public class SceneTransition : MonoBehaviour
     public void goToTitlePage()
     {
         SceneManager.LoadScene("title page");
-        Debug.Log("loaded title page");
     }
 
     public void goToLevelSelector()
     {
         SceneManager.LoadScene("level selector");
-        Debug.Log("loaded level selec");
         Destroy(GameObject.FindGameObjectWithTag("DataTransfer"));
     }
 
