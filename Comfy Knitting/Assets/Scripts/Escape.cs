@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Escape : MonoBehaviour
 {
     public GameObject pausemenu;
+    public bool cursor;
 
     private bool isPaused;
     // Start is called before the first frame update
@@ -50,13 +51,7 @@ public class Escape : MonoBehaviour
       Time.timeScale = 1;
       pausemenu.SetActive(false);
       isPaused = false;
-      Cursor.visible = false;
+      if(!cursor) Cursor.visible = false;
     }
 
-    public void ContinueWithCursor(){
-      Time.timeScale = 1;
-      pausemenu.SetActive(false);
-      isPaused = false;
-    }
-    
 }
