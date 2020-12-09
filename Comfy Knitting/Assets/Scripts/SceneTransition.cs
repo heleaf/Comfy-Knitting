@@ -16,6 +16,9 @@ public class SceneTransition : MonoBehaviour
         Destroy(GameObject.FindGameObjectWithTag("DataTransfer"));
     }
 
+    public void goToGallery(){
+        SceneManager.LoadScene("Gallery");
+    }
     public void goToGame()
     {
         SceneManager.LoadScene("Game");
